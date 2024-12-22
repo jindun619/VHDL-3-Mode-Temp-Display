@@ -1,0 +1,2219 @@
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Dec 22 22:56:20 2024
+
+
+Command Line:  synthesis -f lab6_impl1_lattice.synproj -gui -msgset C:/labcode6/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = TemperatureSensor.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.13/ispfpga/xo2c00/data (searchpath added)
+-p C:/labcode6/impl1 (searchpath added)
+-p C:/labcode6 (searchpath added)
+VHDL library = work
+VHDL design file = C:/labcode6/impl1/source/beep.vhd
+VHDL design file = C:/labcode6/impl1/source/encode.vhd
+VHDL design file = C:/labcode6/impl1/source/modeswitch.vhd
+VHDL design file = C:/labcode6/impl1/source/sample.vhd
+VHDL design file = C:/labcode6/impl1/source/temptrans.vhd
+VHDL design file = C:/labcode6/impl1/source/toC.vhd
+VHDL design file = C:/labcode6/impl1/source/toF.vhd
+VHDL design file = C:/labcode6/impl1/source/top.vhd
+VHDL design file = C:/labcode6/impl1/source/transto595.vhd
+VHDL design file = C:/labcode6/impl1/source/work.vhd
+NGD file = lab6_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/labcode6/impl1". VHDL-1504
+Analyzing VHDL file c:/labcode6/impl1/source/beep.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/beep.vhd(6): analyzing entity pwm. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/beep.vhd(15): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/work.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/work.vhd(5): analyzing package my_data_types. VHDL-1014
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/encode.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/encode.vhd(7): analyzing entity encode. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/encode.vhd(18): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/modeswitch.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/modeswitch.vhd(7): analyzing entity modtrans. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/modeswitch.vhd(21): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/sample.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/sample.vhd(7): analyzing entity cyclesampler. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/sample.vhd(16): analyzing architecture cyclesample. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/temptrans.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/temptrans.vhd(5): analyzing entity b20trans. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/temptrans.vhd(13): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/toc.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/toc.vhd(8): analyzing entity toc. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/toc.vhd(19): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/tof.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/tof.vhd(7): analyzing entity tof. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/tof.vhd(15): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/top.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/top.vhd(11): analyzing entity temperaturesensor. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/top.vhd(30): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/labcode6/impl1/source/transto595.vhd. VHDL-1481
+INFO - synthesis: c:/labcode6/impl1/source/transto595.vhd(7): analyzing entity datato595. VHDL-1012
+INFO - synthesis: c:/labcode6/impl1/source/transto595.vhd(21): analyzing architecture behavior. VHDL-1010
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+unit TemperatureSensor is not yet analyzed. VHDL-1485
+c:/labcode6/impl1/source/top.vhd(11): executing TemperatureSensor(behavior)
+
+WARNING - synthesis: c:/labcode6/impl1/source/top.vhd(26): replacing existing netlist TemperatureSensor(behavior). VHDL-1205
+Top module name (VHDL): TemperatureSensor
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = TemperatureSensor.
+WARNING - synthesis: Initial value found on net Fahrenheit[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net Fahrenheit[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Bit 31 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data41 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data51 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data61 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data71 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data81 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data91 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/Data101 is stuck at Zero
+WARNING - synthesis: c:/labcode6/impl1/source/beep.vhd(57): Register \BC/tune_i0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/labcode6/impl1/source/beep.vhd(57): Register \BC/tune_i2 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\DT/shift_cnt' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
+
+
+
+WARNING - synthesis: Bit 31 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/db31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/db21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/db11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/db01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/da31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/da21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/da11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/da01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d431 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d421 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d411 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d401 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d331 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d321 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d311 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d301 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d231 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d221 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d211 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CC/d201 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dh31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dh21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dh11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dh01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dg31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dg21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dg11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dg01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/df31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/df21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/df11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/df01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/de31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/de21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/de11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/de01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dd31 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dd21 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dd11 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \CF/dd01 is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/DataOut[4] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/DataOut[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/DataOut[2] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/DataOut[1] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CC/DataOut[0] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/DataF[4] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/DataF[3] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/DataF[2] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/DataF[1] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \CF/DataF[0] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \CF/DataF[0] is stuck at Zero
+
+The number of registers created due to operator pipelining is 244.
+
+######## Missing driver on net \BC/pwm_cnt[31]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[30]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[29]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[28]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[27]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[26]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[25]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[24]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[23]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[22]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[21]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[20]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[19]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[18]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[17]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[16]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[15]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[14]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[13]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[12]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[11]. Patching with GND.
+######## Missing driver on net \BC/pwm_cnt[10]. Patching with GND.
+WARNING - synthesis: Bit 9 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \CC/DataOut_integer is stuck at Zero
+WARNING - synthesis: c:/labcode6/impl1/source/toc.vhd(108): Register \CC/Data21_ret9_i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/labcode6/impl1/source/toc.vhd(153): Register \CC/DataOut[4]_ret7__i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/labcode6/impl1/source/toc.vhd(240): Register \CC/DataOut[2]_ret5__i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/labcode6/impl1/source/temptrans.vhd(130): Register \CB/turn_i31 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \CC/Data01_ret8_i0 is a one-to-one match with \CC/Data01_ret8_i9.
+Duplicate register/latch removal. \CC/Data21_ret9_i3 is a one-to-one match with \CC/Data21_ret9_i12.
+Duplicate register/latch removal. \CC/Data21_ret9_i7 is a one-to-one match with \CC/Data21_ret9_i9.
+Duplicate register/latch removal. \CC/Data21_ret9_i8 is a one-to-one match with \CC/Data21_ret9_i7.
+Duplicate register/latch removal. \CC/Data01_ret8_i1 is a one-to-one match with \CC/Data01_ret8_i10.
+Duplicate register/latch removal. \CC/Data01_ret8_i4 is a one-to-one match with \CC/Data01_ret8_i0.
+Duplicate register/latch removal. \CC/Data31_ret6_i4 is a one-to-one match with \CC/Data31_ret6_i13.
+Duplicate register/latch removal. \CC/Data31_ret6_i8 is a one-to-one match with \CC/Data31_ret6_i10.
+Duplicate register/latch removal. \CC/Data31_ret6_i9 is a one-to-one match with \CC/Data31_ret6_i8.
+Duplicate register/latch removal. \CC/DataOut_decimal_i0 is a one-to-one match with \CC/DataOut_decimal_i4.
+Duplicate register/latch removal. \CC/Data21_ret9_i3 is a one-to-one match with \CC/Data21_ret9_i8.
+Duplicate register/latch removal. \CC/Data31_ret6_i4 is a one-to-one match with \CC/Data31_ret6_i9.
+GSR instance connected to net rst_c.
+WARNING - synthesis: mRegister \DE/temp_4__31__I_31_i2 is stuck at Zero
+Duplicate register/latch removal. \CC/DataOut[1]_ret0__i4 is a one-to-one match with \CC/DataOut[1]_ret0__i9.
+WARNING - synthesis: mRegister \DE/temp_2__4__I_0_2810_i5 is stuck at Zero
+WARNING - synthesis: mRegister \DE/temp_3__4__I_0_2808_i5 is stuck at Zero
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in TemperatureSensor_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file lab6_impl1.ngd.
+
+################### Begin Area Report (TemperatureSensor)######################
+Number of register bits => 582 of 4635 (12 % )
+BB => 1
+CCU2D => 385
+FD1P3AX => 261
+FD1P3AY => 1
+FD1P3IX => 68
+FD1S1A => 17
+FD1S1D => 1
+FD1S1I => 3
+FD1S1J => 1
+FD1S3AX => 61
+FD1S3AY => 1
+FD1S3IX => 168
+GSR => 1
+IB => 3
+L6MUX21 => 4
+LUT4 => 483
+OB => 4
+PFUMX => 42
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : clk_c, loads : 507
+  Net : CB/overflow, loads : 53
+  Net : DE/temp_4__2__N_2772, loads : 21
+  Net : DE/mode_1_derived_1, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 39
+Top 10 highest fanout Clock Enables:
+  Net : CC/clk_c_enable_272, loads : 83
+  Net : CF/clk_c_enable_150, loads : 81
+  Net : CC/clk_c_enable_237, loads : 77
+  Net : CB/overflow_enable_36, loads : 24
+  Net : DT/clk_c_enable_95, loads : 16
+  Net : BC/clk_c_enable_116, loads : 11
+  Net : CB/overflow_enable_47, loads : 11
+  Net : CF/clk_c_enable_130, loads : 7
+  Net : CC/clk_c_enable_108, loads : 7
+  Net : CB/overflow_enable_48, loads : 5
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : CC/clk_c_enable_272, loads : 84
+  Net : CF/clk_c_enable_150, loads : 81
+  Net : CC/clk_c_enable_237, loads : 77
+  Net : DT/n15573, loads : 33
+  Net : BC/n15574, loads : 33
+  Net : MC/MK/n15576, loads : 33
+  Net : MC/mode_1, loads : 32
+  Net : MC/mode_0, loads : 32
+  Net : CF/n2252, loads : 31
+  Net : CB/overflow_enable_36, loads : 24
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets \DE/temp_4__2__N_2772]   |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets \CB/overflow]            |  200.000 MHz|   63.922 MHz|     9 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |  200.000 MHz|   50.777 MHz|    23 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 130.645  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 5.438  secs
+--------------------------------------------------------------

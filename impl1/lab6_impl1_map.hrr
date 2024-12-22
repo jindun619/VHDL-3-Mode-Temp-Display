@@ -1,0 +1,93 @@
+---------------------------------------------------
+Report for cell TemperatureSensor
+   Instance path: TemperatureSensor
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     635.00        100.0
+                                  LUT4	     484.00        100.0
+                                 IOBUF	          8        100.0
+                                PFUREG	        582        100.0
+                                RIPPLE	        385        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                   pwm	          1         5.9
+                                   toF	          1        42.3
+                                   toC	          1        16.8
+                              modtrans	          1         5.3
+                                encode	          1         7.6
+                             dataTo595	          1        10.0
+                              B20trans	          1        12.0
+---------------------------------------------------
+Report for cell dataTo595
+   Instance path: TemperatureSensor/DT
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      63.42        10.0
+                                  LUT4	      83.00        17.1
+                                PFUREG	         54         9.3
+                                RIPPLE	         17         4.4
+---------------------------------------------------
+Report for cell toF
+   Instance path: TemperatureSensor/CF
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     268.33        42.3
+                                  LUT4	      95.00        19.6
+                                PFUREG	        119        20.4
+                                RIPPLE	        254        66.0
+---------------------------------------------------
+Report for cell encode
+   Instance path: TemperatureSensor/DE
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      48.33         7.6
+                                  LUT4	     101.00        20.9
+                                PFUREG	         22         3.8
+---------------------------------------------------
+Report for cell B20trans
+   Instance path: TemperatureSensor/CB
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      76.25        12.0
+                                  LUT4	     118.00        24.4
+                                PFUREG	         58        10.0
+                                RIPPLE	         17         4.4
+---------------------------------------------------
+Report for cell pwm
+   Instance path: TemperatureSensor/BC
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.50         5.9
+                                  LUT4	      18.00         3.7
+                                PFUREG	         45         7.7
+                                RIPPLE	         29         7.5
+---------------------------------------------------
+Report for cell modtrans
+   Instance path: TemperatureSensor/MC
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      33.58         5.3
+                                  LUT4	      21.00         4.3
+                                PFUREG	         41         7.0
+                                RIPPLE	         27         7.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                          CycleSampler	          1         3.7
+---------------------------------------------------
+Report for cell CycleSampler
+   Instance path: TemperatureSensor/MC/MK
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      23.25         3.7
+                                  LUT4	      16.00         3.3
+                                PFUREG	         38         6.5
+                                RIPPLE	         17         4.4
+---------------------------------------------------
+Report for cell toC
+   Instance path: TemperatureSensor/CC
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     106.42        16.8
+                                  LUT4	      45.00         9.3
+                                PFUREG	        243        41.8
+                                RIPPLE	         41        10.6

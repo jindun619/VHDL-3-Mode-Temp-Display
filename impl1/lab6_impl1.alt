@@ -1,0 +1,16 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Sun Dec 22 22:57:00 2024 *
+NOTE DESIGN NAME: TemperatureSensor *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS mode_key : L14 : in *
+NOTE PINS rst : M13 : in *
+NOTE PINS clk : C1 : in *
+NOTE PINS rck : H3 : out *
+NOTE PINS sck : J2 : out *
+NOTE PINS din : G3 : out *
+NOTE PINS beep : P13 : out *
+NOTE PINS DQ : H12 : inout *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

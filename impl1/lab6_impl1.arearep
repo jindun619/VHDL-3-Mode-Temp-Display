@@ -1,0 +1,135 @@
+----------------------------------------------------------------------
+Report for cell TemperatureSensor.TECH
+Register bits:  582 of 4635 (12.557%)
+I/O cells:      8
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         1          100.0
+                              CCU2D       385          100.0
+                            FD1P3AX       261          100.0
+                            FD1P3AY         1          100.0
+                            FD1P3IX        68          100.0
+                             FD1S1A        17          100.0
+                             FD1S1D         1          100.0
+                             FD1S1I         3          100.0
+                             FD1S1J         1          100.0
+                            FD1S3AX        61          100.0
+                            FD1S3AY         1          100.0
+                            FD1S3IX       168          100.0
+                                GSR         1          100.0
+                                 IB         3          100.0
+                            L6MUX21         4          100.0
+                               LUT4       483          100.0
+                                 OB         4          100.0
+                              PFUMX        42          100.0
+                        VERIFIC_PWR         1          100.0
+SUB MODULES
+                           B20trans         1
+                       CycleSampler         1
+                          dataTo595         1
+                             encode         1
+                           modtrans         1
+                                pwm         1
+                                toC         1
+                                toF         1
+                              TOTAL      1514
+----------------------------------------------------------------------
+Report for cell dataTo595.v1
+Instance Path : DT
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17            4.4
+                            FD1P3AX         1            0.4
+                            FD1P3AY         1          100.0
+                            FD1P3IX        17           25.0
+                            FD1S3AX         1            1.6
+                            FD1S3AY         1          100.0
+                            FD1S3IX        33           19.6
+                            L6MUX21         3           75.0
+                               LUT4        77           15.9
+                              PFUMX        21           50.0
+                              TOTAL       172
+----------------------------------------------------------------------
+Report for cell toF.v1
+Instance Path : CF
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       254           66.0
+                            FD1P3AX        60           23.0
+                            FD1P3IX        21           30.9
+                            FD1S3IX        38           22.6
+                               LUT4        95           19.7
+                              TOTAL       468
+----------------------------------------------------------------------
+Report for cell encode.v1
+Instance Path : DE
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             FD1S1A        17          100.0
+                             FD1S1D         1          100.0
+                             FD1S1I         3          100.0
+                             FD1S1J         1          100.0
+                               LUT4       105           21.7
+                              PFUMX        16           38.1
+                              TOTAL       143
+----------------------------------------------------------------------
+Report for cell B20trans.v1
+Instance Path : CB
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17            4.4
+                            FD1P3AX        44           16.9
+                            FD1P3IX         8           11.8
+                            FD1S3AX         6            9.8
+                            L6MUX21         1           25.0
+                               LUT4       119           24.6
+                              PFUMX         5           11.9
+                              TOTAL       200
+----------------------------------------------------------------------
+Report for cell pwm.v1
+Instance Path : BC
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        29            7.5
+                            FD1P3AX         1            0.4
+                            FD1P3IX        10           14.7
+                            FD1S3AX         2            3.3
+                            FD1S3IX        32           19.0
+                               LUT4        18            3.7
+                              TOTAL        92
+----------------------------------------------------------------------
+Report for cell modtrans.v1
+Instance Path : MC
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        27            7.0
+                            FD1P3AX         5            1.9
+                            FD1S3AX         4            6.6
+                            FD1S3IX        32           19.0
+                               LUT4        21            4.3
+SUB MODULES
+                       CycleSampler         1
+                              TOTAL        90
+----------------------------------------------------------------------
+Report for cell CycleSampler.v1
+Instance Path : MC.MK
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17            4.4
+                            FD1P3AX         3            1.1
+                            FD1S3AX         3            4.9
+                            FD1S3IX        32           19.0
+                               LUT4        16            3.3
+                              TOTAL        71
+----------------------------------------------------------------------
+Report for cell toC.v1
+Instance Path : CC
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        41           10.6
+                            FD1P3AX       150           57.5
+                            FD1P3IX        12           17.6
+                            FD1S3AX        48           78.7
+                            FD1S3IX        33           19.6
+                               LUT4        45            9.3
+                              TOTAL       329

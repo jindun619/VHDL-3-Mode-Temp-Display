@@ -1,0 +1,1326 @@
+
+      Lattice Mapping Report File for Design Module 'TemperatureSensor'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     lab6_impl1.ngd -o lab6_impl1_map.ncd -pr lab6_impl1.prf -mp lab6_impl1.mrp
+     -lpf C:/labcode6/impl1/lab6_impl1.lpf -lpf C:/labcode6/lab6.lpf -c 0 -gui
+     -msgset C:/labcode6/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  12/22/24  22:56:26
+
+Design Summary
+--------------
+
+   Number of registers:    582 out of  4635 (13%)
+      PFU registers:          582 out of  4320 (13%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       635 out of  2160 (29%)
+      SLICEs as Logic/ROM:    635 out of  2160 (29%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        385 out of  2160 (18%)
+   Number of LUT4s:        1254 out of  4320 (29%)
+      Number used as logic LUTs:        484
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      770
+      Number used as shift registers:     0
+   Number of PIO sites used: 8 + 4(JTAG) out of 105 (11%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net clk_c: 277 loads, 277 rising, 0 falling (Driver: PIO clk )
+     Net mode_1: 1 loads, 0 rising, 1 falling (Driver: MC/tmpmpde_i0_i1 )
+     Net DE/temp_4__2__N_2772: 20 loads, 20 rising, 0 falling (Driver:
+     DE/i5616_1_lut_2_lut )
+
+                                    Page 1
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+Design Summary (cont)
+---------------------
+     Net CB/overflow: 38 loads, 38 rising, 0 falling (Driver: CB/overflow_202 )
+   Number of Clock Enables:  39
+     Net clk_c_enable_272: 38 loads, 38 LSLICEs
+     Net clk_c_enable_105: 2 loads, 2 LSLICEs
+     Net DT/clk_c_enable_95: 9 loads, 9 LSLICEs
+     Net DT/din_N_3186: 1 loads, 1 LSLICEs
+     Net DT/clk_c_enable_132: 1 loads, 1 LSLICEs
+     Net CF/clk_c_enable_150: 30 loads, 30 LSLICEs
+     Net CF/clk_c_enable_130: 2 loads, 2 LSLICEs
+     Net CF/clk_c_enable_124: 2 loads, 2 LSLICEs
+     Net CF/clk_c_enable_111: 2 loads, 2 LSLICEs
+     Net CF/clk_c_enable_127: 2 loads, 2 LSLICEs
+     Net CF/clk_c_enable_121: 2 loads, 2 LSLICEs
+     Net CF/clk_c_enable_118: 2 loads, 2 LSLICEs
+     Net CF/clk_c_enable_114: 2 loads, 2 LSLICEs
+     Net clk_c_enable_151: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_1: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_2: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_36: 11 loads, 11 LSLICEs
+     Net CB/overflow_enable_4: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_5: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_6: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_7: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_47: 7 loads, 7 LSLICEs
+     Net CB/overflow_enable_9: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_10: 1 loads, 1 LSLICEs
+     Net CB/DQ_N_237: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_11: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_50: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_48: 3 loads, 3 LSLICEs
+     Net CB/overflow_enable_37: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_38: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_39: 1 loads, 1 LSLICEs
+     Net CB/clk_c_enable_152: 1 loads, 1 LSLICEs
+     Net CB/overflow_enable_49: 1 loads, 1 LSLICEs
+     Net BC/clk_c_enable_116: 7 loads, 7 LSLICEs
+     Net MC/MK/keystore_2__N_3302: 2 loads, 2 LSLICEs
+     Net CC/clk_c_enable_108: 2 loads, 2 LSLICEs
+     Net CC/clk_c_enable_237: 37 loads, 37 LSLICEs
+     Net CC/clk_c_enable_275: 2 loads, 2 LSLICEs
+     Net CC/clk_c_enable_135: 2 loads, 2 LSLICEs
+   Number of LSRs:  25
+     Net DT/n15597: 8 loads, 8 LSLICEs
+     Net DT/n5116: 2 loads, 2 LSLICEs
+     Net DT/n15573: 17 loads, 17 LSLICEs
+     Net CF/n5102: 3 loads, 3 LSLICEs
+     Net CF/n5104: 3 loads, 3 LSLICEs
+     Net CF/n5106: 3 loads, 3 LSLICEs
+     Net CF/n5108: 3 loads, 3 LSLICEs
+     Net CF/n5110: 3 loads, 3 LSLICEs
+     Net CF/clk_c_enable_130: 3 loads, 3 LSLICEs
+     Net CF/n2252: 17 loads, 17 LSLICEs
+     Net CF/n20515: 2 loads, 2 LSLICEs
+     Net DE/temp_4__31__N_2727: 2 loads, 2 LSLICEs
+     Net DE/n20559: 2 loads, 2 LSLICEs
+     Net CB/n15867: 3 loads, 3 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+Design Summary (cont)
+---------------------
+     Net CB/n16680: 2 loads, 2 LSLICEs
+     Net CB/n18933: 1 loads, 1 LSLICEs
+     Net BC/n15610: 6 loads, 6 LSLICEs
+     Net BC/n15574: 17 loads, 17 LSLICEs
+     Net MC/MK/n15576: 17 loads, 17 LSLICEs
+     Net CC/n2141: 7 loads, 7 LSLICEs
+     Net CC/clk_c_enable_108: 3 loads, 3 LSLICEs
+     Net CC/n2168: 11 loads, 11 LSLICEs
+     Net CC/n2139: 2 loads, 2 LSLICEs
+     Net CC/n2160: 2 loads, 2 LSLICEs
+     Net CC/n5096: 3 loads, 3 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net CF/clk_c_enable_150: 51 loads
+     Net clk_c_enable_272: 47 loads
+     Net CC/clk_c_enable_237: 40 loads
+     Net mode_0: 33 loads
+     Net CB/turn_0: 24 loads
+     Net tempC_4_0: 23 loads
+     Net CB/state_0: 21 loads
+     Net CB/state_1: 19 loads
+     Net tempC_4_2: 19 loads
+     Net DT/n15573: 18 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| mode_key            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rck                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sck                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| din                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| beep                | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 3
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| DQ                  | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i8837 undriven or does not drive anything - clipped.
+Signal n6806 was merged into signal CB/DQ_N_216
+Signal DE/mode_1_derived_1 was merged into signal mode_1
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal CC/tmp_1603_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal CC/tmp_1603_add_4_1/CI undriven or does not drive anything - clipped.
+Signal CC/add_3251_2/S0 undriven or does not drive anything - clipped.
+Signal CC/add_3251_2/CI undriven or does not drive anything - clipped.
+Signal CC/add_3251_cout/S1 undriven or does not drive anything - clipped.
+Signal CC/add_3251_cout/CO undriven or does not drive anything - clipped.
+Signal CC/tmp_1603_add_4_7/CO undriven or does not drive anything - clipped.
+Signal CC/add_3252_2/S0 undriven or does not drive anything - clipped.
+Signal CC/add_3252_2/CI undriven or does not drive anything - clipped.
+Signal CC/add_3252_cout/S1 undriven or does not drive anything - clipped.
+Signal CC/add_3252_cout/CO undriven or does not drive anything - clipped.
+Signal CC/tmp1_1605_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal CC/tmp1_1605_add_4_1/CI undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_1/CI undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_17/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_970_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_1/CI undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_9/S1 undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+Removed logic (cont)
+--------------------
+Signal CC/sub_968_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal CC/sub_968_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal CC/tmp1_1605_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal CC/tmp1_1605_add_4_15/CO undriven or does not drive anything - clipped.
+Signal CC/add_2930_2/S0 undriven or does not drive anything - clipped.
+Signal CC/add_2930_2/CI undriven or does not drive anything - clipped.
+Signal CC/add_2930_6/S1 undriven or does not drive anything - clipped.
+Signal CC/add_2930_6/S0 undriven or does not drive anything - clipped.
+Signal CC/add_2930_cout/S1 undriven or does not drive anything - clipped.
+Signal CC/add_2930_cout/CO undriven or does not drive anything - clipped.
+Signal MC/MK/keysampulsecnt_1612_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal MC/MK/keysampulsecnt_1612_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal MC/MK/keysampulsecnt_1612_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal MC/MK/keysampulsecnt_1612_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal MC/add_3121_8/CO undriven or does not drive anything - clipped.
+Signal MC/add_6796_2/S1 undriven or does not drive anything - clipped.
+Signal MC/add_6796_2/S0 undriven or does not drive anything - clipped.
+Signal MC/add_6796_2/CI undriven or does not drive anything - clipped.
+Signal MC/add_6796_4/S1 undriven or does not drive anything - clipped.
+Signal MC/add_6796_4/S0 undriven or does not drive anything - clipped.
+Signal MC/add_6796_6/S1 undriven or does not drive anything - clipped.
+Signal MC/add_6796_6/S0 undriven or does not drive anything - clipped.
+Signal MC/add_6796_8/S1 undriven or does not drive anything - clipped.
+Signal MC/add_6796_8/S0 undriven or does not drive anything - clipped.
+Signal MC/add_6796_10/S1 undriven or does not drive anything - clipped.
+Signal MC/add_6796_10/S0 undriven or does not drive anything - clipped.
+Signal MC/add_6796_cout/S1 undriven or does not drive anything - clipped.
+Signal MC/add_6796_cout/CO undriven or does not drive anything - clipped.
+Signal MC/add_3121_2/S0 undriven or does not drive anything - clipped.
+Signal MC/add_3121_2/CI undriven or does not drive anything - clipped.
+Signal BC/pwm_cnt_1610_1611_add_4_11/S1 undriven or does not drive anything -
+     clipped.
+Signal BC/pwm_cnt_1610_1611_add_4_11/CO undriven or does not drive anything -
+     clipped.
+Signal BC/sub_985_add_2_2/S1 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_2/CI undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_4/S1 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_4/S0 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_6/S1 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_6/S0 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_8/S1 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_8/S0 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_10/S1 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_10/S0 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_12/S0 undriven or does not drive anything - clipped.
+Signal BC/sub_985_add_2_12/CO undriven or does not drive anything - clipped.
+Signal BC/div_clk_cnt_1609_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal BC/div_clk_cnt_1609_add_4_1/CI undriven or does not drive anything -
+     clipped.
+
+                                    Page 5
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+Removed logic (cont)
+--------------------
+Signal BC/div_clk_cnt_1609_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal BC/div_clk_cnt_1609_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal BC/pwm_cnt_1610_1611_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal BC/pwm_cnt_1610_1611_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal CB/add_81_1/S0 undriven or does not drive anything - clipped.
+Signal CB/add_81_1/CI undriven or does not drive anything - clipped.
+Signal CB/us_cnt_1601_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal CB/us_cnt_1601_add_4_1/CI undriven or does not drive anything - clipped.
+Signal CB/add_81_21/S1 undriven or does not drive anything - clipped.
+Signal CB/add_81_21/CO undriven or does not drive anything - clipped.
+Signal CB/us_cnt_1601_add_4_11/CO undriven or does not drive anything - clipped.
+     
+Signal CF/add_2813_26/CO undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_12/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_12/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3223_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3223_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3174_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3174_2/CI undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_14/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_14/S0 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_16/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_16/S0 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_18/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_18/S0 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_20/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_20/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3146_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3146_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3147_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3147_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3147_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3147_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3177_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3177_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3177_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3177_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3178_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3178_2/CI undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_22/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_22/S0 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_24/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_24/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3174_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3174_cout/CO undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_26/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_26/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3142_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3142_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3178_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3178_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3150_2/S0 undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+Removed logic (cont)
+--------------------
+Signal CF/add_3150_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3150_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3150_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3151_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3151_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3223_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3223_cout/CO undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_28/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_28/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3151_10/CO undriven or does not drive anything - clipped.
+Signal CF/add_3110_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3110_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3110_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3110_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3113_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3113_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3113_8/CO undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_30/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_30/S0 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_32/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_32/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3210_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3210_2/CI undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3142_12/CO undriven or does not drive anything - clipped.
+Signal CF/add_3143_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3143_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3175_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3175_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3143_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3143_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3144_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3144_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3210_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3210_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3175_22/CO undriven or does not drive anything - clipped.
+Signal CF/add_3195_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3195_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3241_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3241_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3144_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3144_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_2992_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_2992_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3195_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3195_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_2992_24/CO undriven or does not drive anything - clipped.
+Signal CF/tmp_1607_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal CF/tmp_1607_add_4_1/CI undriven or does not drive anything - clipped.
+Signal CF/add_3141_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3141_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3141_16/S1 undriven or does not drive anything - clipped.
+Signal CF/add_2994_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_2994_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3141_18/S1 undriven or does not drive anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+Removed logic (cont)
+--------------------
+Signal CF/add_3141_18/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3241_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3241_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3141_20/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3141_20/CO undriven or does not drive anything - clipped.
+Signal CF/add_3098_1/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3098_1/CI undriven or does not drive anything - clipped.
+Signal CF/add_3233_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3233_2/CI undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_2/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3098_5/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3098_7/S0 undriven or does not drive anything - clipped.
+Signal CF/tmp_1607_add_4_27/CO undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_4/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_4/S0 undriven or does not drive anything - clipped.
+Signal CF/add_2994_24/S1 undriven or does not drive anything - clipped.
+Signal CF/add_2994_24/CO undriven or does not drive anything - clipped.
+Signal CF/add_3176_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3176_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3176_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3176_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3098_15/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3098_15/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3098_17/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3098_17/CO undriven or does not drive anything - clipped.
+Signal CF/add_3145_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3145_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3145_8/CO undriven or does not drive anything - clipped.
+Signal CF/add_3101_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3101_2/CI undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_6/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_6/S0 undriven or does not drive anything - clipped.
+Signal CF/add_2813_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_2813_2/CI undriven or does not drive anything - clipped.
+Signal CF/add_3101_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3101_cout/CO undriven or does not drive anything - clipped.
+Signal CF/add_3102_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3102_2/CI undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_8/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_8/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3102_10/CO undriven or does not drive anything - clipped.
+Signal CF/add_3146_2/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3146_2/CI undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_10/S1 undriven or does not drive anything - clipped.
+Signal CF/sub_972_add_2_10/S0 undriven or does not drive anything - clipped.
+Signal CF/add_3233_cout/S1 undriven or does not drive anything - clipped.
+Signal CF/add_3233_cout/CO undriven or does not drive anything - clipped.
+Signal DT/shift_clock_cnt_1608_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal DT/shift_clock_cnt_1608_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal DT/shift_clock_cnt_1608_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal DT/shift_clock_cnt_1608_add_4_33/CO undriven or does not drive anything -
+
+                                    Page 8
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+Removed logic (cont)
+--------------------
+     clipped.
+Block CB/i2790_1_lut was optimized away.
+Block DE/i5302_1_lut_rep_130 was optimized away.
+Block i1 was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'rst_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 530 
+
+     Type and instance name of component: 
+   Register : DT/codeP__i0
+   Register : DT/shift_clock_ls_60
+   Register : DT/codeP__i1
+   Register : DT/codeP__i2
+   Register : CF/dg2_335
+   Register : CF/dg3_333
+   Register : CF/dh0_326
+   Register : CF/dh1_324
+   Register : CF/dh2_322
+   Register : CF/dh3_320
+   Register : CF/db__i0
+   Register : CF/dc__i0
+   Register : CF/dh31__i1
+   Register : CF/dd__i0
+   Register : CF/de__i0
+   Register : CF/df__i0
+   Register : CF/dg__i0
+   Register : CF/dh__i0
+   Register : CF/dh21__i1
+   Register : CF/dh11__i1
+   Register : CF/dh01__i1
+   Register : CF/dg31__i1
+   Register : CF/dg21__i1
+   Register : CF/dg11__i1
+   Register : CF/dg01__i1
+
+                                    Page 9
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CF/df31__i1
+   Register : CF/df21__i1
+   Register : CF/df11__i1
+   Register : CF/df01__i1
+   Register : CF/de31__i1
+   Register : CF/de21__i1
+   Register : CF/de11__i1
+   Register : CF/de01__i1
+   Register : CF/dd31__i1
+   Register : CF/dd21__i1
+   Register : CF/dd11__i1
+   Register : CF/dd01__i1
+   Register : CF/DataF_4___i1
+   Register : CF/DataF_3___i1
+   Register : CF/DataF_2___i1
+   Register : CF/DataF_1___i1
+   Register : CF/DataF_0___i1
+   Register : CF/dd0_363
+   Register : CF/dd1_361
+   Register : CF/dd2_359
+   Register : CF/dd3_357
+   Register : CF/de0_355
+   Register : CF/de1_353
+   Register : CF/de2_351
+   Register : CF/de3_349
+   Register : CF/df0_347
+   Register : CF/df1_345
+   Register : CF/df2_343
+   Register : CF/df3_341
+   Register : CF/dg0_339
+   Register : CF/dg1_337
+   Register : CF/da_1606__i0
+   Register : CF/tmp_1607__i0
+   Register : CF/db__i1
+   Register : CF/db__i2
+   Register : CF/db__i3
+   Register : CF/dc__i1
+   Register : CF/dc__i2
+   Register : CF/dc__i3
+   Register : CF/dd__i1
+   Register : CF/dd__i2
+   Register : CF/dd__i3
+   Register : CF/de__i1
+   Register : CF/de__i2
+   Register : CF/de__i3
+   Register : CF/df__i1
+   Register : CF/df__i2
+   Register : CF/df__i3
+   Register : CF/dg__i1
+   Register : CF/dg__i2
+   Register : CF/dg__i3
+   Register : CF/dh__i1
+   Register : CF/dh__i2
+   Register : CF/dh__i3
+   Register : CF/DataF_4___i2
+   Register : CF/DataF_4___i3
+
+                                   Page 10
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CF/DataF_4___i4
+   Register : CF/DataF_3___i2
+   Register : CF/DataF_3___i3
+   Register : CF/DataF_3___i4
+   Register : CF/DataF_2___i2
+   Register : CF/DataF_2___i3
+   Register : CF/DataF_2___i4
+   Register : CF/DataF_1___i2
+   Register : CF/DataF_1___i3
+   Register : CF/DataF_1___i4
+   Register : CF/DataF_0___i2
+   Register : CF/DataF_0___i3
+   Register : CF/DataF_0___i4
+   Register : CF/da_1606__i1
+   Register : CF/da_1606__i2
+   Register : CF/da_1606__i3
+   Register : CF/tmp_1607__i1
+   Register : CF/tmp_1607__i2
+   Register : CF/tmp_1607__i3
+   Register : CF/tmp_1607__i4
+   Register : CF/tmp_1607__i5
+   Register : CF/tmp_1607__i6
+   Register : CF/tmp_1607__i7
+   Register : CF/tmp_1607__i8
+   Register : CF/tmp_1607__i9
+   Register : CF/tmp_1607__i10
+   Register : CF/tmp_1607__i11
+   Register : CF/tmp_1607__i12
+   Register : CF/tmp_1607__i13
+   Register : CF/tmp_1607__i14
+   Register : CF/tmp_1607__i15
+   Register : CF/tmp_1607__i16
+   Register : CF/tmp_1607__i17
+   Register : CF/tmp_1607__i18
+   Register : CF/tmp_1607__i19
+   Register : CF/tmp_1607__i20
+   Register : CF/tmp_1607__i21
+   Register : CF/tmp_1607__i22
+   Register : CF/tmp_1607__i23
+   Register : CF/tmp_1607__i24
+   Register : CF/tmp_1607__i25
+   Register : CF/tmp_1607__i26
+   Register : DE/temp_4__31__I_31_i1
+   Register : DE/temp_0__4__I_54_i1
+   Register : DE/temp_1__4__I_48_i1
+   Register : DE/temp_2__4__I_0_2810_i1
+   Register : DE/temp_3__4__I_0_2808_i1
+   Register : DE/temp_4__2__I_0_i1
+   Register : DE/temp_0__4__I_54_i2
+   Register : DE/temp_0__4__I_54_i3
+   Register : DE/temp_0__4__I_54_i4
+   Register : DE/temp_0__4__I_54_i5
+   Register : DE/temp_1__4__I_48_i2
+   Register : DE/temp_1__4__I_48_i3
+   Register : DE/temp_1__4__I_48_i4
+   Register : DE/temp_1__4__I_48_i5
+
+                                   Page 11
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : DE/temp_2__4__I_0_2810_i2
+   Register : DE/temp_2__4__I_0_2810_i3
+   Register : DE/temp_2__4__I_0_2810_i4
+   Register : DE/temp_3__4__I_0_2808_i2
+   Register : DE/temp_3__4__I_0_2808_i3
+   Register : DE/temp_3__4__I_0_2808_i4
+   Register : DE/temp_4__2__I_0_i2
+   Register : DE/temp_4__2__I_0_i3
+   Register : CB/Data_i2
+   Register : CB/state_i1
+   Register : CB/state_i0
+   Register : CB/DQ_205
+   Register : CB/s_devide_i0
+   Register : CB/read_in_210
+   Register : CB/Data_i3
+   Register : CB/Data_i4
+   Register : CB/Data_i5
+   Register : CB/us_cnt_1601__i0
+   Register : CB/Data_i1
+   Register : CB/Data_i6
+   Register : CB/i198_212
+   Register : CB/us_devide_1597__i0
+   Register : CB/Data_i7
+   Register : CB/num_1599__i2
+   Register : CB/num_1599__i1
+   Register : CB/us_cnt_1601__i10
+   Register : CB/us_cnt_1601__i8
+   Register : CB/num_1599__i4
+   Register : CB/num_1599__i3
+   Register : CB/s_devide_i19
+   Register : CB/s_devide_i18
+   Register : CB/s_devide_i17
+   Register : CB/s_devide_i16
+   Register : CB/s_devide_i15
+   Register : CB/s_devide_i14
+   Register : CB/s_devide_i13
+   Register : CB/s_devide_i12
+   Register : CB/s_devide_i11
+   Register : CB/s_devide_i10
+   Register : CB/s_devide_i9
+   Register : CB/s_devide_i8
+   Register : CB/s_devide_i7
+   Register : CB/s_devide_i6
+   Register : CB/s_devide_i5
+   Register : CB/s_devide_i4
+   Register : CB/s_devide_i3
+   Register : CB/s_devide_i2
+   Register : CB/s_devide_i1
+   Register : CB/Data_i8
+   Register : CB/Data_i9
+   Register : CB/Data_i10
+   Register : CB/us_cnt_1601__i1
+   Register : CB/us_cnt_1601__i2
+   Register : CB/us_cnt_1601__i3
+   Register : CB/us_cnt_1601__i4
+   Register : CB/us_cnt_1601__i5
+
+                                   Page 12
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CB/us_cnt_1601__i6
+   Register : CB/us_cnt_1601__i7
+   Register : CB/us_cnt_1601__i9
+   Register : CB/us_devide_1597__i1
+   Register : CB/overflow_202
+   Register : CB/num_1599__i0
+   Register : CB/us_devide_1597__i2
+   Register : CB/us_devide_1597__i3
+   Register : CB/Data_i0
+   Register : CB/turn_i0
+   Register : BC/pwm_cnt_1610_1611__i8
+   Register : BC/pwm_cnt_1610_1611__i7
+   Register : BC/div_clk_52
+   Register : BC/div_clk_ls_53
+   Register : BC/pwm_out_56
+   Register : BC/pwm_cnt_1610_1611__i6
+   Register : BC/pwm_cnt_1610_1611__i5
+   Register : BC/pwm_cnt_1610_1611__i4
+   Register : BC/pwm_cnt_1610_1611__i3
+   Register : BC/pwm_cnt_1610_1611__i2
+   Register : BC/pwm_cnt_1610_1611__i10
+   Register : BC/pwm_cnt_1610_1611__i9
+   Register : BC/pwm_cnt_1610_1611__i1
+   Register : BC/div_clk_cnt_1609__i0
+   Register : BC/div_clk_cnt_1609__i1
+   Register : BC/div_clk_cnt_1609__i2
+   Register : BC/div_clk_cnt_1609__i3
+   Register : BC/div_clk_cnt_1609__i4
+   Register : BC/div_clk_cnt_1609__i5
+   Register : BC/div_clk_cnt_1609__i6
+   Register : BC/div_clk_cnt_1609__i7
+   Register : BC/div_clk_cnt_1609__i8
+   Register : BC/div_clk_cnt_1609__i9
+   Register : BC/div_clk_cnt_1609__i10
+   Register : BC/div_clk_cnt_1609__i11
+   Register : BC/div_clk_cnt_1609__i12
+   Register : BC/div_clk_cnt_1609__i13
+   Register : BC/div_clk_cnt_1609__i14
+   Register : BC/div_clk_cnt_1609__i15
+   Register : BC/div_clk_cnt_1609__i16
+   Register : BC/div_clk_cnt_1609__i17
+   Register : BC/div_clk_cnt_1609__i18
+   Register : BC/div_clk_cnt_1609__i19
+   Register : BC/div_clk_cnt_1609__i20
+   Register : BC/div_clk_cnt_1609__i21
+   Register : BC/div_clk_cnt_1609__i22
+   Register : BC/div_clk_cnt_1609__i23
+   Register : BC/div_clk_cnt_1609__i24
+   Register : BC/div_clk_cnt_1609__i25
+   Register : BC/div_clk_cnt_1609__i26
+   Register : BC/div_clk_cnt_1609__i27
+   Register : BC/div_clk_cnt_1609__i28
+   Register : BC/div_clk_cnt_1609__i29
+   Register : BC/div_clk_cnt_1609__i30
+   Register : BC/div_clk_cnt_1609__i31
+   Register : MC/kmodstate_ls_27
+
+                                   Page 13
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : MC/MK/keystore_i0_i0
+   Register : MC/MK/keysampulse_31
+   Register : MC/MK/keysampulse_ls_32
+   Register : MC/MK/keystate_34
+   Register : MC/MK/keysampulsecnt_1612__i0
+   Register : MC/MK/keystore_i0_i1
+   Register : MC/MK/keystore_i0_i2
+   Register : MC/MK/keysampulsecnt_1612__i1
+   Register : MC/MK/keysampulsecnt_1612__i2
+   Register : MC/MK/keysampulsecnt_1612__i3
+   Register : MC/MK/keysampulsecnt_1612__i4
+   Register : MC/MK/keysampulsecnt_1612__i5
+   Register : MC/MK/keysampulsecnt_1612__i6
+   Register : MC/MK/keysampulsecnt_1612__i7
+   Register : MC/MK/keysampulsecnt_1612__i8
+   Register : MC/MK/keysampulsecnt_1612__i9
+   Register : MC/MK/keysampulsecnt_1612__i10
+   Register : MC/MK/keysampulsecnt_1612__i11
+   Register : MC/MK/keysampulsecnt_1612__i12
+   Register : MC/MK/keysampulsecnt_1612__i13
+   Register : MC/MK/keysampulsecnt_1612__i14
+   Register : MC/MK/keysampulsecnt_1612__i15
+   Register : MC/MK/keysampulsecnt_1612__i16
+   Register : MC/MK/keysampulsecnt_1612__i17
+   Register : MC/MK/keysampulsecnt_1612__i18
+   Register : MC/MK/keysampulsecnt_1612__i19
+   Register : MC/MK/keysampulsecnt_1612__i20
+   Register : MC/MK/keysampulsecnt_1612__i21
+   Register : MC/MK/keysampulsecnt_1612__i22
+   Register : MC/MK/keysampulsecnt_1612__i23
+   Register : MC/MK/keysampulsecnt_1612__i24
+   Register : MC/MK/keysampulsecnt_1612__i25
+   Register : MC/MK/keysampulsecnt_1612__i26
+   Register : MC/MK/keysampulsecnt_1612__i27
+   Register : MC/MK/keysampulsecnt_1612__i28
+   Register : MC/MK/keysampulsecnt_1612__i29
+   Register : MC/MK/keysampulsecnt_1612__i30
+   Register : MC/MK/keysampulsecnt_1612__i31
+   Register : CC/tmp_1603__i5
+   Register : CC/Data1_285
+   Register : CC/Data2_287
+   Register : CC/Data3_289
+   Register : CC/Data4_291
+   Register : CC/Data5_293
+   Register : CC/Data6_295
+   Register : CC/DataOut_integer_i1
+   Register : CC/Data7_297
+   Register : CC/Data8_299
+   Register : CC/Data9_301
+   Register : CC/Data10_303
+   Register : CC/DataOut_decimal_i0
+   Register : CC/d3__i0
+   Register : CC/tmp_1603__i4
+   Register : CC/d4__i0
+   Register : CC/tmp1_1605__i0
+   Register : CC/d20_358
+
+                                   Page 14
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CC/d21_356
+   Register : CC/d22_354
+   Register : CC/d23_352
+   Register : CC/d30_350
+   Register : CC/Data0_283
+   Register : CC/tmp_1603__i3
+   Register : CC/db__i0
+   Register : CC/da_1602__i0
+   Register : CC/tmp_1603__i2
+   Register : CC/tmp_1603__i1
+   Register : CC/db0_316
+   Register : CC/No_Name__i1
+   Register : CC/Data41_ret14_i1
+   Register : CC/Data101_ret13_i1
+   Register : CC/d31_348
+   Register : CC/d32_346
+   Register : CC/d1_1604__i3
+   Register : CC/d33_344
+   Register : CC/DataOut_4__rep_5__i0
+   Register : CC/No_Name_2703__i1
+   Register : CC/DataOut_2__rep_4__i0
+   Register : CC/d1_1604__i2
+   Register : CC/No_Name_2702__i1
+   Register : CC/d40_339
+   Register : CC/DataOut_3__rep_3__i0
+   Register : CC/No_Name_2701__i1
+   Register : CC/d41_337
+   Register : CC/DataOut_0__rep_2__i0
+   Register : CC/No_Name_2700__i1
+   Register : CC/DataOut_1__rep_1__i0
+   Register : CC/d2__i0
+   Register : CC/d42_335
+   Register : CC/da0_326
+   Register : CC/da1_324
+   Register : CC/d1_1604__i1
+   Register : CC/d43_333
+   Register : CC/da2_322
+   Register : CC/d1_1604__i0
+   Register : CC/da3_320
+   Register : CC/db1_314
+   Register : CC/db2_312
+   Register : CC/db3_310
+   Register : CC/tmp_1603__i6
+   Register : CC/DataOut_integer_i2
+   Register : CC/DataOut_integer_i3
+   Register : CC/DataOut_integer_i4
+   Register : CC/DataOut_integer_i5
+   Register : CC/DataOut_integer_i6
+   Register : CC/DataOut_integer_i7
+   Register : CC/DataOut_decimal_i1
+   Register : CC/DataOut_decimal_i2
+   Register : CC/DataOut_decimal_i3
+   Register : CC/DataOut_decimal_i5
+   Register : CC/DataOut_decimal_i6
+   Register : CC/DataOut_decimal_i7
+   Register : CC/DataOut_decimal_i8
+
+                                   Page 15
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CC/DataOut_decimal_i9
+   Register : CC/DataOut_decimal_i10
+   Register : CC/DataOut_decimal_i11
+   Register : CC/DataOut_decimal_i12
+   Register : CC/DataOut_decimal_i13
+   Register : CC/DataOut_decimal_i14
+   Register : CC/d3__i1
+   Register : CC/d3__i2
+   Register : CC/d3__i3
+   Register : CC/d4__i1
+   Register : CC/d4__i2
+   Register : CC/d4__i3
+   Register : CC/tmp1_1605__i1
+   Register : CC/tmp1_1605__i2
+   Register : CC/tmp1_1605__i3
+   Register : CC/tmp1_1605__i4
+   Register : CC/tmp1_1605__i5
+   Register : CC/tmp1_1605__i6
+   Register : CC/tmp1_1605__i7
+   Register : CC/tmp1_1605__i8
+   Register : CC/tmp1_1605__i9
+   Register : CC/tmp1_1605__i10
+   Register : CC/tmp1_1605__i11
+   Register : CC/tmp1_1605__i12
+   Register : CC/tmp1_1605__i13
+   Register : CC/db__i1
+   Register : CC/db__i2
+   Register : CC/db__i3
+   Register : CC/da_1602__i1
+   Register : CC/da_1602__i2
+   Register : CC/da_1602__i3
+   Register : CC/No_Name__i2
+   Register : CC/No_Name__i3
+   Register : CC/No_Name__i4
+   Register : CC/Data41_ret14_i2
+   Register : CC/Data41_ret14_i3
+   Register : CC/Data101_ret13_i2
+   Register : CC/Data101_ret13_i3
+   Register : CC/Data101_ret13_i4
+   Register : CC/Data21_ret9_i3
+   Register : CC/Data01_ret8_i1
+   Register : CC/Data01_ret8_i4
+   Register : CC/Data01_ret8_i5
+   Register : CC/Data01_ret8_i6
+   Register : CC/Data01_ret8_i7
+   Register : CC/Data01_ret8_i8
+   Register : CC/Data01_ret8_i11
+   Register : CC/DataOut_4__ret7__i7
+   Register : CC/DataOut_4__ret7__i8
+   Register : CC/DataOut_4__ret7__i9
+   Register : CC/DataOut_4__ret7__i10
+   Register : CC/DataOut_4__ret7__i11
+   Register : CC/DataOut_4__ret7__i12
+   Register : CC/DataOut_4__ret7__i13
+   Register : CC/DataOut_4__ret7__i14
+   Register : CC/DataOut_4__ret7__i15
+
+                                   Page 16
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CC/DataOut_4__ret7__i16
+   Register : CC/DataOut_4__ret7__i17
+   Register : CC/DataOut_4__ret7__i18
+   Register : CC/DataOut_4__ret7__i19
+   Register : CC/DataOut_4__ret7__i20
+   Register : CC/DataOut_4__ret7__i21
+   Register : CC/DataOut_4__ret7__i22
+   Register : CC/DataOut_4__ret7__i23
+   Register : CC/DataOut_4__ret7__i24
+   Register : CC/DataOut_4__ret7__i25
+   Register : CC/DataOut_4__ret7__i26
+   Register : CC/DataOut_4__ret7__i27
+   Register : CC/DataOut_4__ret7__i28
+   Register : CC/DataOut_4__ret7__i29
+   Register : CC/DataOut_4__ret7__i30
+   Register : CC/DataOut_4__ret7__i31
+   Register : CC/DataOut_4__ret7__i32
+   Register : CC/DataOut_4__rep_5__i1
+   Register : CC/DataOut_4__rep_5__i2
+   Register : CC/DataOut_4__rep_5__i3
+   Register : CC/No_Name_2703__i2
+   Register : CC/No_Name_2703__i3
+   Register : CC/No_Name_2703__i4
+   Register : CC/Data31_ret6_i4
+   Register : CC/DataOut_2__ret5__i5
+   Register : CC/DataOut_2__ret5__i6
+   Register : CC/DataOut_2__ret5__i7
+   Register : CC/DataOut_2__ret5__i8
+   Register : CC/DataOut_2__ret5__i9
+   Register : CC/DataOut_2__ret5__i10
+   Register : CC/DataOut_2__ret5__i11
+   Register : CC/DataOut_2__ret5__i12
+   Register : CC/DataOut_2__ret5__i13
+   Register : CC/DataOut_2__ret5__i14
+   Register : CC/DataOut_2__ret5__i15
+   Register : CC/DataOut_2__ret5__i16
+   Register : CC/DataOut_2__ret5__i17
+   Register : CC/DataOut_2__ret5__i18
+   Register : CC/DataOut_2__ret5__i19
+   Register : CC/DataOut_2__ret5__i20
+   Register : CC/DataOut_2__ret5__i21
+   Register : CC/DataOut_2__rep_4__i1
+   Register : CC/DataOut_2__rep_4__i2
+   Register : CC/DataOut_2__rep_4__i3
+   Register : CC/No_Name_2702__i2
+   Register : CC/No_Name_2702__i3
+   Register : CC/No_Name_2702__i4
+   Register : CC/DataOut_3__ret3__i6
+   Register : CC/DataOut_3__ret3__i7
+   Register : CC/DataOut_3__ret3__i8
+   Register : CC/DataOut_3__ret3__i9
+   Register : CC/DataOut_3__ret3__i10
+   Register : CC/DataOut_3__ret3__i11
+   Register : CC/DataOut_3__ret3__i12
+   Register : CC/DataOut_3__ret3__i13
+   Register : CC/DataOut_3__ret3__i14
+
+                                   Page 17
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CC/DataOut_3__ret3__i15
+   Register : CC/DataOut_3__ret3__i16
+   Register : CC/DataOut_3__ret3__i17
+   Register : CC/DataOut_3__ret3__i18
+   Register : CC/DataOut_3__ret3__i19
+   Register : CC/DataOut_3__ret3__i20
+   Register : CC/DataOut_3__ret3__i21
+   Register : CC/DataOut_3__ret3__i22
+   Register : CC/DataOut_3__ret3__i23
+   Register : CC/DataOut_3__ret3__i24
+   Register : CC/DataOut_3__ret3__i25
+   Register : CC/DataOut_3__ret3__i26
+   Register : CC/DataOut_3__ret3__i27
+   Register : CC/DataOut_3__ret3__i28
+   Register : CC/DataOut_3__ret3__i29
+   Register : CC/DataOut_3__rep_3__i1
+   Register : CC/DataOut_3__rep_3__i2
+   Register : CC/DataOut_3__rep_3__i3
+   Register : CC/No_Name_2701__i2
+   Register : CC/No_Name_2701__i3
+   Register : CC/No_Name_2701__i4
+   Register : CC/DataOut_0__ret1__i3
+   Register : CC/DataOut_0__ret1__i4
+   Register : CC/DataOut_0__ret1__i5
+   Register : CC/DataOut_0__ret1__i6
+   Register : CC/DataOut_0__ret1__i7
+   Register : CC/DataOut_0__ret1__i8
+   Register : CC/DataOut_0__ret1__i9
+   Register : CC/DataOut_0__ret1__i10
+   Register : CC/DataOut_0__ret1__i11
+   Register : CC/DataOut_0__ret1__i12
+   Register : CC/DataOut_0__ret1__i13
+   Register : CC/DataOut_0__ret1__i14
+   Register : CC/DataOut_0__rep_2__i1
+   Register : CC/DataOut_0__rep_2__i2
+   Register : CC/DataOut_0__rep_2__i3
+   Register : CC/No_Name_2700__i2
+   Register : CC/No_Name_2700__i3
+   Register : CC/No_Name_2700__i4
+   Register : CC/DataOut_1__ret0__i4
+   Register : CC/DataOut_1__ret0__i5
+   Register : CC/DataOut_1__ret0__i6
+   Register : CC/DataOut_1__ret0__i7
+   Register : CC/DataOut_1__ret0__i10
+   Register : CC/DataOut_1__ret0__i11
+   Register : CC/DataOut_1__ret0__i12
+   Register : CC/DataOut_1__ret0__i13
+   Register : CC/DataOut_1__ret0__i14
+   Register : CC/DataOut_1__ret0__i15
+   Register : CC/DataOut_1__ret0__i16
+   Register : CC/DataOut_1__rep_1__i1
+   Register : CC/tmp_1603__i0
+   Register : CC/DataOut_1__rep_1__i2
+   Register : CC/DataOut_1__rep_1__i3
+   Register : CC/d2__i1
+   Register : CC/d2__i2
+
+                                   Page 18
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : CC/d2__i3
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 47 
+
+     Type and instance name of component: 
+   Register : DT/shift_cnt_FSM__i8
+   Register : DT/shift_cnt_FSM__i1
+   Register : DT/shift_cnt_FSM__i7
+   Register : DT/shift_cnt_FSM__i15
+   Register : DT/shift_cnt_FSM__i6
+   Register : DT/shift_cnt_FSM__i14
+   Register : DT/shift_cnt_FSM__i5
+   Register : DT/shift_cnt_FSM__i13
+   Register : DT/shift_cnt_FSM__i12
+   Register : DT/shift_cnt_FSM__i11
+   Register : DT/shift_cnt_FSM__i10
+   Register : DT/shift_cnt_FSM__i4
+   Register : DT/shift_cnt_FSM__i9
+   Register : DT/shift_cnt_FSM__i3
+   Register : DT/shift_cnt_FSM__i2
+   Register : DT/shift_clock_cnt_1608__i0
+   Register : DT/shift_clock_cnt_1608__i1
+   Register : DT/shift_clock_cnt_1608__i2
+   Register : DT/shift_clock_cnt_1608__i3
+   Register : DT/shift_clock_cnt_1608__i4
+   Register : DT/shift_clock_cnt_1608__i5
+   Register : DT/shift_clock_cnt_1608__i6
+   Register : DT/shift_clock_cnt_1608__i7
+   Register : DT/shift_clock_cnt_1608__i8
+   Register : DT/shift_clock_cnt_1608__i9
+   Register : DT/shift_clock_cnt_1608__i10
+   Register : DT/shift_clock_cnt_1608__i11
+   Register : DT/shift_clock_cnt_1608__i12
+   Register : DT/shift_clock_cnt_1608__i13
+   Register : DT/shift_clock_cnt_1608__i14
+   Register : DT/shift_clock_cnt_1608__i15
+   Register : DT/shift_clock_cnt_1608__i16
+   Register : DT/shift_clock_cnt_1608__i17
+   Register : DT/shift_clock_cnt_1608__i18
+   Register : DT/shift_clock_cnt_1608__i19
+   Register : DT/shift_clock_cnt_1608__i20
+   Register : DT/shift_clock_cnt_1608__i21
+   Register : DT/shift_clock_cnt_1608__i22
+   Register : DT/shift_clock_cnt_1608__i23
+   Register : DT/shift_clock_cnt_1608__i24
+   Register : DT/shift_clock_cnt_1608__i25
+   Register : DT/shift_clock_cnt_1608__i26
+
+                                   Page 19
+
+
+
+
+Design:  TemperatureSensor                             Date:  12/22/24  22:56:26
+
+GSR Usage (cont)
+----------------
+   Register : DT/shift_clock_cnt_1608__i27
+   Register : DT/shift_clock_cnt_1608__i28
+   Register : DT/shift_clock_cnt_1608__i29
+   Register : DT/shift_clock_cnt_1608__i30
+   Register : DT/shift_clock_cnt_1608__i31
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 58 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 20
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.

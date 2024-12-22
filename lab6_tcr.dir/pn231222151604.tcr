@@ -1,0 +1,9 @@
+#Start recording tcl command: 12/22/2023 15:13:15
+#Project Location: E:/coding/vhdl/666; Project name: lab6
+prj_project new -name "lab6" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
+file copy -force -- "E:/coding/vhdl/labcod6/beep.vhd" "E:/coding/vhdl/labcod6/encode.vhd" "E:/coding/vhdl/labcod6/modeswitch.vhd" "E:/coding/vhdl/labcod6/sample.vhd" "E:/coding/vhdl/labcod6/temptrans.vhd" "E:/coding/vhdl/666/impl1/source"
+file copy -force -- "E:/coding/vhdl/labcod6/toC.vhd" "E:/coding/vhdl/labcod6/toF.vhd" "E:/coding/vhdl/labcod6/top.vhd" "E:/coding/vhdl/labcod6/transto595.vhd" "E:/coding/vhdl/labcod6/work.vhd" "E:/coding/vhdl/666/impl1/source"
+prj_src add "E:/coding/vhdl/666/impl1/source/beep.vhd" "E:/coding/vhdl/666/impl1/source/encode.vhd" "E:/coding/vhdl/666/impl1/source/modeswitch.vhd" "E:/coding/vhdl/666/impl1/source/sample.vhd" "E:/coding/vhdl/666/impl1/source/temptrans.vhd" "E:/coding/vhdl/666/impl1/source/toC.vhd" "E:/coding/vhdl/666/impl1/source/toF.vhd" "E:/coding/vhdl/666/impl1/source/top.vhd" "E:/coding/vhdl/666/impl1/source/transto595.vhd" "E:/coding/vhdl/666/impl1/source/work.vhd"
+prj_project save
+prj_run Export -impl impl1
+#Stop recording: 12/22/2023 15:16:04
